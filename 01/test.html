@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #0423c3;
+      }
+      .value {
+        font-size: 80px;
+        color: #7ae58a;
+        padding: 40px;
+      }
+      button {
+        background-color: black;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-size: 20px;
+      }
+      button:hover {
+        background-color: whitesmoke;
+        color: black;
+        transition: all 0.3s ease-out;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 class="value">0</h1>
+    <button>+</button>
+    <button>-</button>
+  </body>
+
+  <script>
+    const value = document.querySelector(".value");
+    let num = 0;
+    const btn = document.querySelectorAll("button");
+
+    btn[0].addEventListener("click", () => {
+      num += 10;
+      valueSet(num);
+    });
+
+    btn[1].addEventListener("click", () => {
+      num -= 10;
+      valueSet(num);
+    });
+
+    const valueSet = (n) => {
+      value.innerText = `한 반의 인원은
+      ${n}명 입니다.`;
+    };
+  </script>
+</html>
